@@ -1,9 +1,13 @@
 FlurryPlugin
 ============
 
+## Attention
+
+This is a fork of https://github.com/jfpsf/flurry-phonegap-plugin that fixes some current (2015-11-07) problems.
+
 ## Usage
 
-    cordova plugin add https://github.com/jfpsf/flurry-phonegap-plugin.git
+    cordova plugin add https://github.com/piotrowski/flurry-phonegap-plugin.git
 
 
 ### Installation
