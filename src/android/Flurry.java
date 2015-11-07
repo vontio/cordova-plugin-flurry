@@ -38,15 +38,20 @@ public class Flurry extends CordovaPlugin {
             if(action.equals("startSession")) {
                 FlurryAgent.init(cordova.getActivity().getBaseContext(), args.getString(0));
                 FlurryAgent.onStartSession(cordova.getActivity().getBaseContext(), args.getString(0));
-            } else if(action.equals("endSession")) {
+            } 
+			else if(action.equals("endSession")) {
                 FlurryAgent.onEndSession(cordova.getActivity().getBaseContext());
-            } else if(action.equals("setSessionContinueSeconds")) {
+            } 
+			else if(action.equals("setSessionContinueSeconds")) {
                 FlurryAgent.setContinueSessionMillis(args.getLong(0));
-            } else if(action.equals("setAppVersion")) {
+            } 
+			else if(action.equals("setAppVersion")) {
                 FlurryAgent.setVersionName(args.getString(0));
-            } else if(action.equals("setUserID")) {
+            } 
+			else if (action.equals("setUserID")) {
                 FlurryAgent.setUserId(args.getString(0));
-            } else if(action.equals("setGender")) {
+            } 
+			else if(action.equals("setGender")) {
                 byte gender = Constants.UNKNOWN;
                 if (args.getString(0) == "m") {
                     gender = Constants.MALE;
@@ -55,27 +60,31 @@ public class Flurry extends CordovaPlugin {
                     gender = Constants.FEMALE;
                 }
                 FlurryAgent.setGender(gender);
-            } else if(action.equals("setAge")) {
+            } 
+			else if(action.equals("setAge")) {
                 FlurryAgent.setAge((int)args.getLong(0));
-            } else if (action.equals("logEvent") || action.equals("logEventWithParameters")
+            } 
+			else if(action.equals("logEvent") || action.equals("logEventWithParameters")
                     || action.equals("logTimedEvent") || action.equals("logTimedEventWithParameters")) {
                 boolean timed = false;
                 if(args.optString(2).equalsIgnoreCase("Yes")) timed = true;
                 this.logEvent(args.getString(0), args.optJSONObject(1), timed);                
-            } else if(action.equals("endTimedEvent")) {
+            } 
+			else if(action.equals("endTimedEvent")) {
                 FlurryAgent.endTimedEvent(args.getString(0));
-            } else if(action.equals("endTimedEventWithParameters")) {
+            } 
+			else if(action.equals("endTimedEventWithParameters")) {
                 Map<String, String> params = this.JsonToMap(args.optJSONObject(1));
                 if(params != null)
                     FlurryAgent.endTimedEvent(args.getString(0), params);
             }
-            else if (action.equals("setCrashReportingEnabled")) {
+            else if(action.equals("setCrashReportingEnabled")) {
                 FlurryAgent.setCaptureUncaughtExceptions(args.optString(0).equalsIgnoreCase("Yes"));
             }
-            else if (action.equals("logPageView")) {
+            else if(action.equals("logPageView")) {
                 FlurryAgent.onPageView();
             }
-            else if (action.equals("logError")) {
+            else if(action.equals("logError")) {
                 FlurryAgent.onError(args.getString(0), args.getString(1), " ");
             }
             else {
