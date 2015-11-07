@@ -47,5 +47,14 @@ Includes:
 
 TODO
 
+### TODO
+
+- Update to current Flurry SDK versions
+- clean up "preparation" docs (Android part is not reflected in example)
+- clean up flurryplugin.js (endSession + startSession shouldn't be necessary any more)
+- clean up usage example
+- rid of package name com.phonegap.plugins.flurry
+- flurryPlugin => flurry
+
 ## License
 Apache 2.0
