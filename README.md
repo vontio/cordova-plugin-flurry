@@ -1,24 +1,28 @@
-FlurryPlugin
+cordova-plugin-flurry
 ============
 
-## Attention
+This plugin exposes the Flurry SDK for iOS and Android
 
-This is a fork of https://github.com/jfpsf/flurry-phonegap-plugin that fixes some current (2015-11-07) problems.
+Includes:
+- Flurry iOS SDK 7.2.0
+- Flurry Android SDK 6.1.0
+
 
 ## Installation
 
-    cordova plugin add https://github.com/piotrowski/flurry-phonegap-plugin.git
+    cordova plugin add https://github.com/piotrowski/cordova-plugin-flurry.git
 
-### Integration
+### Usage
 
-1. Call the startSession() method, with your app key, after the device is ready
-2. Call the other Flurry plugin methods as appropriate
-3. In Android, call flurry.endSession when the app is paused and again call flurry.startSession when the app resumes, or it won't log the session.
-4. In iOS, setSessionReportsOnCloseEnabled and setSessionReportsOnPauseEnabled to log the session.
+1. After the device is ready call `startSession()` with your app key as a parameter
+2. In your application code call the other Flurry plugin methods as appropriate
+
+#### Preparation
+- Android: Call flurry.endSession when the app is paused and flurry.startSession when the app resumes
+- iOS: Call setSessionReportsOnCloseEnabled and setSessionReportsOnPauseEnabled
 
 ## Example 
 
-	self.log('Flurry Analytics Init');
 	if (window.plugins && window.plugins.flurry) {
 		var ua = navigator.userAgent.toLowerCase();
 		var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
@@ -38,14 +42,6 @@ This is a fork of https://github.com/jfpsf/flurry-phonegap-plugin that fixes som
 			});
 		}
 	}
-
-## Contributors
-
-- [jfpsf](https://github.com/jfpsf)
-- [Koray Balcı](https://github.com/koraybalci)
-- [Patrick heneise (The Mobile Firm)](https://github.com/PatrickHeneise)
-- [Ivan Karpan](https://github.com/IvanKarpan)
-- [LilDevine89](https://github.com/LilDevine89)
 
 ## License
 Apache 2.0
