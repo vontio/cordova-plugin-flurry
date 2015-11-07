@@ -27,6 +27,7 @@
 		<header-file src="src/ios/Flurry.h" />
 		<header-file src="src/ios/FlurryPlugin.h" />
 		<source-file src="src/ios/FlurryPlugin.m" />
+		<source-file src="src/ios/libFlurry_7.2.0.a" framework="true" />
 		<framework src="SystemConfiguration.framework" />
 		<framework src="CFNetwork.framework" />
 		<framework src="Security.framework" />
@@ -46,6 +47,7 @@
 			<uses-permission android:name="android.permission.INTERNET" />
 		</config-file>
 		<source-file src="src/android/Flurry.java" target-dir="src/com/phonegap/plugins/flurry/" />
-        	<framework src="com.google.android.gms:play-services-plus:+" />
+		<source-file src="src/android/FlurryAnalytics-6.1.0.jar" target-dir="lib/" />
+        <framework src="com.google.android.gms:play-services-plus:+" />
 	</platform>
 </plugin>
