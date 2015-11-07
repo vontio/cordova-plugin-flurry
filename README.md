@@ -12,16 +12,16 @@ Includes:
 
     cordova plugin add https://github.com/piotrowski/cordova-plugin-flurry.git
 
-### Usage
+## Usage
 
 1. After the device is ready call `startSession()` with your app key as a parameter
 2. In your application code call the other Flurry plugin methods as appropriate
 
-#### Preparation
+### Preparation
 - Android: Call flurry.endSession when the app is paused and flurry.startSession when the app resumes
 - iOS: Call setSessionReportsOnCloseEnabled and setSessionReportsOnPauseEnabled
 
-## Example 
+### Example 
 
 	if (window.plugins && window.plugins.flurry) {
 		var ua = navigator.userAgent.toLowerCase();
@@ -42,6 +42,10 @@ Includes:
 			});
 		}
 	}
+
+### Methods
+
+TODO
 
 ## License
 Apache 2.0
