@@ -23,6 +23,7 @@
 		<config-file target="config.xml" parent="/*">
 			<feature name="FlurryPlugin">
 				<param name="ios-package" value="FlurryPlugin"/>
+				<param name="onload" value="true" />
 			</feature>
 		</config-file>
 		
@@ -40,6 +41,7 @@
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="FlurryPlugin">
 				<param name="android-package" value="com.phonegap.plugins.flurry.Flurry" />
+				<param name="onload" value="true" />
 			</feature>
 		</config-file>
 		
@@ -53,7 +55,7 @@
 		</config-file>
 		
 		<source-file src="src/android/Flurry.java" target-dir="src/com/phonegap/plugins/flurry/" />
-		<source-file src="src/android/FlurryAnalytics-6.1.0.jar" target-dir="lib/" />
-        <framework src="com.google.android.gms:play-services:+" />
+		<source-file src="src/android/FlurryAnalytics-6.1.0.jar" target-dir="libs" />
+        <framework src="com.google.android.gms:play-services-analytics:+" />
 	</platform>
 </plugin>
