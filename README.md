@@ -55,6 +55,7 @@ TODO
 - clean up usage example
 - rid of package name com.phonegap.plugins.flurry
 - flurryPlugin => flurry
+- add remark on Google Play Services and Google Repository that have to be installed locally to be able to build
 
 ## License
 Apache 2.0
