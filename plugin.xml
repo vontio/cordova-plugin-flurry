@@ -54,6 +54,6 @@
 		
 		<source-file src="src/android/Flurry.java" target-dir="src/com/phonegap/plugins/flurry/" />
 		<source-file src="src/android/FlurryAnalytics-6.1.0.jar" target-dir="lib/" />
-        <framework src="com.google.android.gms:play-services-plus:+" />
+        <framework src="com.google.android.gms:play-services:+" />
 	</platform>
 </plugin>
