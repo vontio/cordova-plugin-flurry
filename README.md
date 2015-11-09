@@ -7,6 +7,7 @@ Includes:
 - Flurry iOS SDK 7.2.0
 - Flurry Android SDK 6.1.0
 
+It is a drop in replacement for https://github.com/jfpsf/flurry-phonegap-plugin and heavily based on it.
 
 ## Installation
 
