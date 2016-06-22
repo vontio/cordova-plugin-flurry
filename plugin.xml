@@ -45,17 +45,11 @@
 			</feature>
 		</config-file>
 		
-		<config-file target="AndroidManifest.xml" parent="/*/application">
-			<meta-data android:name="com.google.android.gms.version" 
-				android:value="@integer/google_play_services_version"/>
-		</config-file>
-		
 		<config-file target="AndroidManifest.xml" parent="/*">
 			<uses-permission android:name="android.permission.INTERNET" />
 		</config-file>
 		
 		<source-file src="src/android/Flurry.java" target-dir="src/com/phonegap/plugins/flurry/" />
-		<source-file src="src/android/FlurryAnalytics-6.1.0.jar" target-dir="libs" />
-        <framework src="com.google.android.gms:play-services-analytics:+" />
+		<source-file src="src/android/flurryAnalytics.jar" target-dir="libs" />
 	</platform>
 </plugin>
